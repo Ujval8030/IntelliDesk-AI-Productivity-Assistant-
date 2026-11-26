@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IntelliDesk - AI Productivity Assistant</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="topbar">
+        <a class="brand" href="#">
+            <span class="logo">✦</span>
+            IntelliDesk
+            <span class="ai-tag">AI</span>
+        </a>
+
+        <div class="header-right">
+            <span class="status-dot"></span>
+            <span>AI Assistant</span>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <main class="app-layout">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <p class="side-heading">WORKSPACE</p>
+
+            <button class="tool-btn active" data-action="chat">
+                <span>◉</span> AI Chat
+            </button>
+
+            <button class="tool-btn" data-action="summarize">
+                <span>≡</span> Summarize Text
+            </button>
+
+            <button class="tool-btn" data-action="rewrite">
+                <span>✎</span> Rewrite Content
+            </button>
+
+            <button class="tool-btn" data-action="study">
+                <span>▤</span> Study Assistant
+            </button>
+
+            <div class="sidebar-tip">
+                <div class="tip-star">✦</div>
+
+                <strong>Work smarter</strong>
+
+                <p>
+                    Use AI to save time, organize ideas
+                    and learn faster.
+                </p>
+            </div>
+
+        </aside>
+
+        <!-- Workspace -->
+        <section class="workspace">
+
+            <div class="welcome">
+                <div>
+                    <p class="eyebrow">YOUR AI WORKSPACE</p>
+
+                    <h1 id="pageTitle">
+                        Your productivity,
+                        <span>powered by AI.</span>
+                    </h1>
+
+                    <p id="pageSubtitle">
+                        Ask anything, get ideas,
+                        and move your work forward.
+                    </p>
+                </div>
+
+                <button class="clear-btn" id="clearBtn">
+                    Clear chat
+                </button>
+            </div>
+
+            <!-- Chat Panel -->
+            <div class="chat-panel">
+
+                <!-- Messages -->
+                <div class="messages" id="messages">
+
+                    <div class="welcome-message">
+
+                        <div class="assistant-avatar">
+                            ✦
+                        </div>
+
+                        <div class="message-content">
+
+                            <strong>Welcome to IntelliDesk</strong>
+
+                            <p>
+                                Your AI productivity assistant.
+                                Choose a tool or type a message
+                                below to get started.
+                            </p>
+
+                            <div class="quick-actions">
+
+                                <button data-action="summarize">
+                                    Summarize my notes
+                                </button>
+
+                                <button data-action="rewrite">
+                                    Improve my writing
+                                </button>
+
+                                <button data-action="study">
+                                    Explain a topic
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Input Area -->
+                <div class="composer-area">
+
+                    <div class="mode-label" id="modeLabel">
+                        AI Chat
+                    </div>
+
+                    <form id="chatForm">
+
+                        <textarea
+                            id="userInput"
+                            rows="3"
+                            placeholder="Message IntelliDesk..."
+                            required
+                        ></textarea>
+
+                        <div class="composer-bottom">
+
+                            <span>
+                                AI can make mistakes.
+                                Check important information.
+                            </span>
+
+                            <button
+                                class="send-btn"
+                                id="sendBtn"
+                                type="submit"
+                            >
+                                Send ↑
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            <footer>
+                IntelliDesk AI · Built for smarter productivity
+            </footer>
+
+        </section>
+
+    </main>
+
+    <!-- JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
